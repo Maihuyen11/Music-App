@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/baoyen', function () {
     return view('Bảo Yến');
 });
@@ -16,3 +17,7 @@ Route::get('/tranvothuhung', function () {
 Route::get('/truongthicamhong', function () {
     return 'Trương Thị Cẩm Hồng';
 });
+
+
+// Route hiển thị phim hành động
+Route::get('/movies/action', [App\Http\Controllers\MovieController::class, 'ActionMovies']);
