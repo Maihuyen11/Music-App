@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/baoyen', function () {
-    return view('welcome');
+    return view('Bảo Yến');
 });
 
 // Route for TestController@test
 Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 
-Route::get('/buimaihuyen', function () {
-    return 'Bùi Mai Huyền';
+Route::get('/tranvothuhung', function () {
+    return 'Trần Võ Thu Hưng';
 });
