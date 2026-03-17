@@ -12,3 +12,7 @@ Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 Route::get('/tranvothuhung', function () {
     return 'Trần Võ Thu Hưng';
 });
+
+Route::get('/truongthicamhong', function () {
+    return 'Trương Thị Cẩm Hồng';
+});
