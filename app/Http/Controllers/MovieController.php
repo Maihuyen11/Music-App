@@ -17,7 +17,7 @@ class MovieController extends Controller
         return view('runtime_over_120', compact('movies'));
     }
     public function phimDoanhThuCaoNhat()
-{
+    {
     $movies = DB::table('movie') // check lại tên bảng
         ->select('movie_name', 'release_date', 'budget')
         ->orderBy('budget', 'desc')
@@ -25,5 +25,16 @@ class MovieController extends Controller
         ->get();
 
     return view('phim_doanh_thu_cao_nhat', compact('movies'));
-}
+    }
+    public function phimHanhDong()
+    {
+        $movies = DB::table('movie')
+            ->join('movie_genre', 'movie.id', '=', 'movie_genre.id_movie')
+            ->join('genre', 'movie_genre.id_genre', '=', 'genre.id')
+            ->where('genre.genre_name', 'Action')
+            ->select('movie.movie_name', 'movie.release_date', 'movie.overview', 'movie.image_link')
+            ->get();
+            
+        return view('action', compact('movies'));
+    }
 }
