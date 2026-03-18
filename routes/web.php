@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovieController;
 
 Route::get('/baoyen', function () {
     return 'Bảo Yến'; 
@@ -16,3 +17,5 @@ Route::get('/tranvothuhung', function () {
 Route::get('/truongthicamhong', function () {
     return 'Trương Thị Cẩm Hồng';
 });
+
+Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
