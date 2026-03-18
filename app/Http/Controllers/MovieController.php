@@ -16,4 +16,14 @@ class MovieController extends Controller
 
         return view('runtime_over_120', compact('movies'));
     }
+    public function phimDoanhThuCaoNhat()
+{
+    $movies = DB::table('movie') // check lại tên bảng
+        ->select('movie_name', 'release_date', 'budget')
+        ->orderBy('budget', 'desc')
+        ->limit(10)
+        ->get();
+
+    return view('phim_doanh_thu_cao_nhat', compact('movies'));
+}
 }
