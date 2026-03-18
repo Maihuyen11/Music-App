@@ -1180,7 +1180,7 @@
                 "orchestra/testbench-core": "^10.9.0",
                 "pda/pheanstalk": "^5.0.6|^7.0.0",
                 "php-http/discovery": "^1.15",
-                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan": "^2.1.41",
                 "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
                 "predis/predis": "^2.3|^3.0",
                 "resend/resend-php": "^0.10.0|^1.0",
@@ -6346,16 +6346,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.53.0",
+            "version": "v1.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "e340eaa2bea9b99192570c48ed837155dbf24fbb"
+                "reference": "bcc5e06f1a79d806d880a4b027964d2aa5872b07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/e340eaa2bea9b99192570c48ed837155dbf24fbb",
-                "reference": "e340eaa2bea9b99192570c48ed837155dbf24fbb",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/bcc5e06f1a79d806d880a4b027964d2aa5872b07",
+                "reference": "bcc5e06f1a79d806d880a4b027964d2aa5872b07",
                 "shasum": ""
             },
             "require": {
@@ -6405,7 +6405,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2026-02-06T12:16:02+00:00"
+            "time": "2026-03-11T14:10:52+00:00"
         },
         {
             "name": "mockery/mockery",
