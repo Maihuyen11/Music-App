@@ -14,9 +14,14 @@ Route::get('/buimaihuyen', function () {
     return 'Bùi Mai Huyền';
 });
 
-Route::get('/the-loai-phim', function () {
-    
-    $genres = DB::table('genre')->get(); 
-    
-    return view('genres', compact('genres')); 
+Route::get('/the-loai-phim', [MovieController::class, 'showGenres']);
+
+Route::get('/hop/canada-movies', function () {
+    $movies = DB::table('movie')->where('country_name', 'Canada')->get();
+    return view('canada_movies', ['movies' => $movies]);
 });
+
+Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
+
+Route::get('/top-movies', [MovieController::class, 'topMovies']);
+
