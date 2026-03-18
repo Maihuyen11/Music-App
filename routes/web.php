@@ -2,13 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/baoyen', function () {
-    return view('welcome');
+    return 'Bảo Yến'; 
 });
 
-// Route for TestController@test
-Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
+Route::get('/test', [TestController::class, 'test']);
 
-Route::get('/buimaihuyen', function () {
-    return 'Bùi Mai Huyền';
+Route::get('/Dinhcuong', function () {
+    return 'Dinh Cuong';
 });
+
+Route::get('/tranvothuhung', function () {
+    return 'Trần Võ Thu Hưng';
+});
+
+Route::get('/truongthicamhong', function () {
+    return 'Trương Thị Cẩm Hồng';
+});
+
+
+// Route hiển thị phim hành động
+Route::get('/movies/action', [App\Http\Controllers\MovieController::class, 'ActionMovies']);
