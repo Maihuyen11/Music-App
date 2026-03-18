@@ -37,12 +37,19 @@ class MovieController extends Controller
             
         return view('action', compact('movies'));
     }
-<<<<<<< HEAD
-=======
     public function showGenres()
     {
         $genres = DB::table('genre')->get(); 
         return view('genres', compact('genres')); 
     }
->>>>>>> Thu-Hung
+    public function phimCanada()
+    {
+        $movies = DB::table('movie')
+            ->select('movie_name', 'release_date', 'runtime')
+            ->where('country_name', 'Canada')
+            ->limit(10)
+            ->get();
+
+        return view('phim_canada', compact('movies'));
+    }
 }

@@ -25,6 +25,9 @@ Route::get('/truongthicamhong', function () {
     return 'Trương Thị Cẩm Hồng';
 });
 
+Route::get('/phamlebichhop', function () {
+    return 'Phạm Lê Bích Hợp';
+});
 
 
 // Route hiển thị phim hành động
@@ -35,10 +38,7 @@ Route::get('/phim_doanh_thu_cao_nhat', [MovieController::class, 'phimDoanhThuCao
 
 Route::get('/the-loai-phim', [MovieController::class, 'showGenres']);
 
-Route::get('/hop/canada-movies', function () {
-    $movies = DB::table('movie')->where('country_name', 'Canada')->get();
-    return view('canada_movies', ['movies' => $movies]);
-});
+Route::get('/canada-movies', [MovieController::class, 'phimCanada']);
 
 Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
