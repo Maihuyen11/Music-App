@@ -25,11 +25,18 @@ Route::get('/truongthicamhong', function () {
     return 'Trương Thị Cẩm Hồng';
 });
 
+
+Route::get('/phamlebichhop', function () {
+    return 'Phạm Lê Bích Hợp';
+});
+
+
 // Route hiển thị phim hành động
 Route::get('/action', [App\Http\Controllers\MovieController::class, 'phimHanhDong']);
 use App\Http\Controllers\MovieController;
 
 Route::get('/phim_doanh_thu_cao_nhat', [MovieController::class, 'phimDoanhThuCaoNhat']);
+
 
 Route::get('/the-loai-phim', [MovieController::class, 'showGenres']);
 
