@@ -30,6 +30,7 @@ Route::get('/phamlebichhop', function () {
     return 'Phạm Lê Bích Hợp';
 });
 
+
 // Route hiển thị phim hành động
 Route::get('/action', [App\Http\Controllers\MovieController::class, 'phimHanhDong']);
 use App\Http\Controllers\MovieController;
@@ -44,6 +45,13 @@ Route::get('/canada-movies', [MovieController::class, 'phimCanada']);
 Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+
+//layout
+Route::get('/trang1','App\Http\Controllers\ViduLayoutController@trang1');
+
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
+
+Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
 
 
 
