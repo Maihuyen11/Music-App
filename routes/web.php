@@ -43,3 +43,4 @@ Route::get('/canada-movies', [MovieController::class, 'phimCanada']);
 Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+
