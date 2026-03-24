@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB; 
+use App\Http\Controllers\LayOutController;
 
 
 Route::get('/baoyen', function () {
@@ -44,5 +46,12 @@ Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
 
-Route::get('/sach/chitiet/{id}', [App\Http\Controllers\LayOutController::class, 'chitiet']);
+// 1. Trang mặc định hiển thị 8 cuốn sách rẻ nhất
+Route::get('/sach', [LayOutController::class, 'sach']);
+
+// 2. Trang hiển thị sách theo thể loại khi bấm Menu 
+Route::get('/sach/theloai/{id}', [LayOutController::class, 'theloai']);
+
+// 3. Trang xem chi tiết 
+Route::get('/sach/chitiet/{id}', [LayOutController::class, 'chitiet']);
 
