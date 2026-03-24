@@ -24,3 +24,4 @@ Route::get('/hop/canada-movies', function () {
 Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+

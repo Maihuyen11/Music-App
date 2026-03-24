@@ -36,8 +36,8 @@
                         </li>
                     </ul>
                 </nav>
-                <img src="{{ asset('images/sidebar_1.jpg') }}" width="100%" class='mt-1'>
-                <img src="{{ asset('images/sidebar_2.jpg') }}" width="100%" class='mt-1'>
+                <img src="{{ asset('image/sidebar_1.jpg') }}" width="100%" class='mt-1'>
+                <img src="{{ asset('image/sidebar_2.jpg') }}" width="100%" class='mt-1'>
             </div>
 
             <div class='col-9'>
