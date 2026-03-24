@@ -14,7 +14,7 @@ class LayOutController extends Controller {
         $data = DB::select("select * from sach where the_loai = ?", [$id]); 
         return view("sach.index", compact("data")); 
     }
-    public function chitiet($id) {
+public function chitiet($id) {
     $sach = DB::select("select * from sach where id = ?", [$id]);
     
     if (count($sach) > 0) {
